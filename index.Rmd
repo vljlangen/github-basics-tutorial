@@ -1,6 +1,6 @@
 --- 
-title: "GitHub Basics for Academic Researchers"
-subtitle: "– or Anyone, Really"
+title: "GitHub Without Tears"
+subtitle: "From Zero to Push in Minutes"
 author: "Ville Langén"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
