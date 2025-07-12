@@ -1,0 +1,19 @@
+book_filename: "github-basics-tutorial"
+language:
+  label:
+    fig: "Figure "
+    tab: "Table "
+  ui:
+    chapter_name: "Chapter "
+rmd_files: [
+  "index.Rmd",
+  "00-what-is-github.Rmd",
+  "01-install-git.Rmd",
+  "02-github-account.Rmd",
+  "03-authentication.Rmd",
+  "04-git-commands.Rmd",
+  "05-workflow.Rmd"
+]
+delete_merged_file: true
+edit: https://github.com/your-username/github-basics-tutorial/edit/main/%s
+view: https://github.com/your-username/github-basics-tutorial/blob/main/%s 

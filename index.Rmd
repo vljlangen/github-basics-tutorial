@@ -1,0 +1,68 @@
+--- 
+title: "GitHub Basics for Academic Researchers"
+subtitle: "– or Anyone, Really"
+author: "Ville Langén"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: [book.bib]
+biblio-style: apalike
+link-citations: yes
+description: "A complete beginner's guide to using GitHub for academic projects and collaboration."
+---
+
+# Introduction {-}
+
+**Goal**: Learn GitHub essentials in 30 minutes and start collaborating on your academic projects.
+
+This tutorial will guide you through everything you need to know to get started with GitHub as an academic researcher. No prior programming experience required – just follow the steps and you'll be ready to use GitHub for your research projects, collaborate with colleagues, and share your work with the world.
+
+## What You'll Learn
+
+By the end of this tutorial, you'll be able to:
+
+- Understand what GitHub is and why it's essential for academics
+- Install and configure Git on your computer
+- Create a GitHub account with secure authentication
+- Use the essential Git commands for daily work
+- Create repositories and manage your academic projects
+- Follow a simple three-command workflow for everyday use
+
+## Why GitHub for Academics?
+
+**GitHub is perfect for:**
+
+- **Research Projects**: Version control for your analysis scripts, papers, and data
+- **Collaboration**: Work with colleagues around the world on shared projects
+- **Open Science**: Share your code and data with the research community
+- **Academic Websites**: Host your professional website (like we did in the main tutorial!)
+- **Teaching**: Share course materials and collect student assignments
+- **Portfolio**: Showcase your programming and research skills
+
+## Prerequisites
+
+**You need:**
+
+- A computer with internet connection
+- An email address
+- 30 minutes of focused time
+
+**You don't need:**
+
+- Prior programming experience
+- Knowledge of command line tools
+- Understanding of version control systems
+
+---
+
+**Let's get started!** In the next chapter, we'll create your GitHub account and set up your profile. 
+
+
+
+
+```{js, echo = FALSE}
+title=document.getElementById('header');
+title.innerHTML = title.innerHTML + '<br>' + '<br>' + '<img src="images/cover_photo.jpg" alt="Test Image">' +
+    '<figcaption style="font-size: 0.9em; color: gray; margin-top: 5px; text-align: left;">' + 'Image credit: <a href="https://www.pexels.com/photo/eyeglasses-in-front-of-laptop-computer-1181253/" target="_blank">Pexels</a>' + '</figcaption>' + '<br>' 
+
+```

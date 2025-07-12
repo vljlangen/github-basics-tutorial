@@ -1,0 +1,157 @@
+# Essential Git Commands
+
+
+<br><br>
+<div style="text-align: center;">
+<img src="images/commands.jpg" alt="Chapter introduction image" style="max-width: 100%; height: auto;">
+<figcaption style="font-size: 0.9em; color: gray; margin-top: 5px;">
+    Image credit: <a href="https://www.pexels.com/photo/black-poodle-lying-on-grass-7516307/" target="_blank">Pexels</a>
+</figcaption>
+</div>
+<br><br>
+
+
+## Understanding Git Workflow
+
+Before diving into commands, let's understand the basic Git workflow:
+
+**Basic Workflow:**
+
+1. **Modify** files in your working directory
+2. **Stage** changes you want to include in next commit
+3. **Commit** staged changes to repository
+4. **Push** commits to GitHub
+
+## Essential Git Commands
+
+### 1. Starting a Repository
+
+**Option A: Clone existing repository**
+```bash
+git clone https://github.com/username/repository-name.git
+cd repository-name
+```
+
+**Option B: Initialize new repository**
+```bash
+mkdir my-project
+cd my-project
+git init
+```
+
+### 2. Check Status
+
+**Most important command - use frequently:**
+
+```bash
+git status
+```
+
+This shows:
+
+- Which files are modified
+- Which files are staged
+- Which files are untracked
+
+### 3. Stage Changes
+
+**Stage specific files (rarely used):**
+```bash
+git add filename.txt
+git add folder/
+```
+
+**Stage all changes (used almost always):**
+```bash
+git add .
+```
+
+### 4. Commit Changes
+
+**Commit with message (used almost always):**
+```bash
+git commit -m "Add introduction chapter"
+```
+
+**Commit with detailed message (rarely used):**
+```bash
+git commit -m "Add introduction chapter
+
+- Added overview of research methodology
+- Included literature review section
+- Fixed formatting issues in references"
+```
+
+### 5. View History
+
+**See commit history:**
+```bash
+git log
+```
+
+**See compact history:**
+```bash
+git log --oneline
+```
+
+**See last 5 commits:**
+```bash
+git log --oneline -5
+```
+
+### 6. Synchronize with GitHub
+
+**Push your changes to GitHub:**
+```bash
+git push
+```
+
+**Pull latest changes from GitHub:**
+```bash
+git pull
+```
+
+### 7. Undo Changes
+
+**⚠️ WARNING: These commands are for experienced users only!** If you're new to Git, please consult a more experienced Git user before venturing into this jungle. These commands can permanently delete your work if used incorrectly.
+
+**Unstage files:**
+```bash
+git reset filename.txt
+```
+
+**Discard changes in working directory:**
+```bash
+git checkout -- filename.txt
+```
+
+**Undo last commit (keep changes):**
+```bash
+git reset --soft HEAD~1
+```
+
+**⚠️ Dangerous: Undo last commit and discard changes:**
+```bash
+git reset --hard HEAD~1
+```
+
+## Daily Research Workflow
+
+```bash
+# Start your day
+git status                    # Check current state
+git pull                     # Get latest changes
+
+# Work on your files
+# ... edit files ...
+
+# Save your work
+git add .                    # Stage all changes
+git status                   # Review what you're committing
+git commit -m "Update analysis results"
+git push                     # Share your changes
+```
+
+---
+
+**Next Chapter Preview**: Now that you know the essential Git commands, you're ready to put everything together into a complete workflow. In the next chapter, we'll create your first GitHub repository, connect it to your local computer, and learn the three-command workflow that handles 90% of your daily Git needs. 

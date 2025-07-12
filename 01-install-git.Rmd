@@ -1,0 +1,50 @@
+# Install and Configure Git
+
+
+<br><br>
+<div style="text-align: center;">
+<img src="images/git.png" alt="Chapter introduction image" style="max-width: 80%; height: auto;">
+<figcaption style="font-size: 0.9em; color: gray; margin-top: 5px;">
+    Image credit: <a href="https://git-scm.com/downloads/logos" target="_blank">Git Logo by Jason Long</a>
+</figcaption>
+</div>
+<br><br>
+
+
+## macOS
+
+Git is already installed on your Mac! No additional installation needed.
+
+## Windows
+
+Download and install from [git-scm.com](https://git-scm.com)
+
+Important: During installation, select "Git Bash" for command line access.
+
+## Linux (Ubuntu/Debian)
+
+```bash
+sudo apt update
+sudo apt install git
+```
+
+## Verify Git Installation
+
+```bash
+git --version
+# Should show: git version 2.x.x
+```
+
+## Configure Git
+
+Set your identity for Git by opening a terminal (macOS/Linux) or Git Bash (Windows) and running these commands:
+
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "your.email@university.edu"
+```
+
+
+---
+
+**Next Chapter Preview**: We'll create your GitHub account, choose a good username, and complete the account verification process. 

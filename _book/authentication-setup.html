@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 4 Authentication Setup | GitHub Basics for Academic Researchers</title>
+  <meta name="description" content="A complete beginner’s guide to using GitHub for academic projects and collaboration." />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 4 Authentication Setup | GitHub Basics for Academic Researchers" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="A complete beginner’s guide to using GitHub for academic projects and collaboration." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 4 Authentication Setup | GitHub Basics for Academic Researchers" />
+  
+  <meta name="twitter:description" content="A complete beginner’s guide to using GitHub for academic projects and collaboration." />
+  
+
+<meta name="author" content="Your Name" />
+
+
+<meta name="date" content="2025-07-12" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="create-your-github-account.html"/>
+<link rel="next" href="essential-git-commands.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">GitHub Basics for Academic Researchers</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome to GitHub</a>
+<ul>
+<li class="chapter" data-level="0.1" data-path="index.html"><a href="index.html#what-youll-learn"><i class="fa fa-check"></i><b>0.1</b> What You’ll Learn</a></li>
+<li class="chapter" data-level="0.2" data-path="index.html"><a href="index.html#why-github-for-academics"><i class="fa fa-check"></i><b>0.2</b> Why GitHub for Academics?</a></li>
+<li class="chapter" data-level="0.3" data-path="index.html"><a href="index.html#prerequisites"><i class="fa fa-check"></i><b>0.3</b> Prerequisites</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="what-is-github.html"><a href="what-is-github.html"><i class="fa fa-check"></i><b>1</b> What is GitHub?</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="what-is-github.html"><a href="what-is-github.html#what-youll-learn-1"><i class="fa fa-check"></i><b>1.1</b> What You’ll Learn</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="install-and-configure-git.html"><a href="install-and-configure-git.html"><i class="fa fa-check"></i><b>2</b> Install and Configure Git</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="install-and-configure-git.html"><a href="install-and-configure-git.html#install-git"><i class="fa fa-check"></i><b>2.1</b> Install Git</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="install-and-configure-git.html"><a href="install-and-configure-git.html#macos"><i class="fa fa-check"></i><b>2.1.1</b> macOS</a></li>
+<li class="chapter" data-level="2.1.2" data-path="install-and-configure-git.html"><a href="install-and-configure-git.html#windows"><i class="fa fa-check"></i><b>2.1.2</b> Windows</a></li>
+<li class="chapter" data-level="2.1.3" data-path="install-and-configure-git.html"><a href="install-and-configure-git.html#linux-ubuntudebian"><i class="fa fa-check"></i><b>2.1.3</b> Linux (Ubuntu/Debian)</a></li>
+<li class="chapter" data-level="2.1.4" data-path="install-and-configure-git.html"><a href="install-and-configure-git.html#verify-git-installation"><i class="fa fa-check"></i><b>2.1.4</b> Verify Git Installation</a></li>
+<li class="chapter" data-level="2.1.5" data-path="install-and-configure-git.html"><a href="install-and-configure-git.html#configure-git"><i class="fa fa-check"></i><b>2.1.5</b> Configure Git</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="install-and-configure-git.html"><a href="install-and-configure-git.html#next-steps"><i class="fa fa-check"></i><b>2.2</b> Next Steps</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="create-your-github-account.html"><a href="create-your-github-account.html"><i class="fa fa-check"></i><b>3</b> Create Your GitHub Account</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="create-your-github-account.html"><a href="create-your-github-account.html#visit-github"><i class="fa fa-check"></i><b>3.1</b> Visit GitHub</a></li>
+<li class="chapter" data-level="3.2" data-path="create-your-github-account.html"><a href="create-your-github-account.html#choose-your-username"><i class="fa fa-check"></i><b>3.2</b> Choose Your Username</a></li>
+<li class="chapter" data-level="3.3" data-path="create-your-github-account.html"><a href="create-your-github-account.html#fill-out-the-form"><i class="fa fa-check"></i><b>3.3</b> Fill Out the Form</a></li>
+<li class="chapter" data-level="3.4" data-path="create-your-github-account.html"><a href="create-your-github-account.html#choose-your-plan"><i class="fa fa-check"></i><b>3.4</b> Choose Your Plan</a></li>
+<li class="chapter" data-level="3.5" data-path="create-your-github-account.html"><a href="create-your-github-account.html#complete-email-verification"><i class="fa fa-check"></i><b>3.5</b> Complete Email Verification</a></li>
+<li class="chapter" data-level="3.6" data-path="create-your-github-account.html"><a href="create-your-github-account.html#next-steps-1"><i class="fa fa-check"></i><b>3.6</b> Next Steps</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="authentication-setup.html"><a href="authentication-setup.html"><i class="fa fa-check"></i><b>4</b> Authentication Setup</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="authentication-setup.html"><a href="authentication-setup.html#preferred-method-r-rstudio"><i class="fa fa-check"></i><b>4.1</b> Preferred Method: R + RStudio</a></li>
+<li class="chapter" data-level="4.2" data-path="authentication-setup.html"><a href="authentication-setup.html#alternative-git-cli-credential-helper"><i class="fa fa-check"></i><b>4.2</b> Alternative: Git CLI + Credential Helper</a></li>
+<li class="chapter" data-level="4.3" data-path="authentication-setup.html"><a href="authentication-setup.html#creating-your-personal-access-token-manually"><i class="fa fa-check"></i><b>4.3</b> Creating Your Personal Access Token Manually</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="authentication-setup.html"><a href="authentication-setup.html#token-security-best-practices"><i class="fa fa-check"></i><b>4.3.1</b> Token Security Best Practices</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="authentication-setup.html"><a href="authentication-setup.html#testing-your-setup"><i class="fa fa-check"></i><b>4.4</b> Testing Your Setup</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="authentication-setup.html"><a href="authentication-setup.html#verify-git-configuration"><i class="fa fa-check"></i><b>4.4.1</b> Verify Git Configuration</a></li>
+<li class="chapter" data-level="4.4.2" data-path="authentication-setup.html"><a href="authentication-setup.html#test-authentication"><i class="fa fa-check"></i><b>4.4.2</b> Test Authentication</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="authentication-setup.html"><a href="authentication-setup.html#troubleshooting"><i class="fa fa-check"></i><b>4.5</b> Troubleshooting</a>
+<ul>
+<li class="chapter" data-level="4.5.1" data-path="authentication-setup.html"><a href="authentication-setup.html#authentication-failed"><i class="fa fa-check"></i><b>4.5.1</b> Authentication Failed</a></li>
+<li class="chapter" data-level="4.5.2" data-path="authentication-setup.html"><a href="authentication-setup.html#clear-stored-credentials"><i class="fa fa-check"></i><b>4.5.2</b> Clear Stored Credentials</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="essential-git-commands.html"><a href="essential-git-commands.html"><i class="fa fa-check"></i><b>5</b> Essential Git Commands</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="essential-git-commands.html"><a href="essential-git-commands.html#understanding-git-workflow"><i class="fa fa-check"></i><b>5.1</b> Understanding Git Workflow</a></li>
+<li class="chapter" data-level="5.2" data-path="essential-git-commands.html"><a href="essential-git-commands.html#essential-git-commands-1"><i class="fa fa-check"></i><b>5.2</b> Essential Git Commands</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="essential-git-commands.html"><a href="essential-git-commands.html#check-your-configuration"><i class="fa fa-check"></i><b>5.2.1</b> 1. Check Your Configuration</a></li>
+<li class="chapter" data-level="5.2.2" data-path="essential-git-commands.html"><a href="essential-git-commands.html#starting-a-repository"><i class="fa fa-check"></i><b>5.2.2</b> 2. Starting a Repository</a></li>
+<li class="chapter" data-level="5.2.3" data-path="essential-git-commands.html"><a href="essential-git-commands.html#check-status"><i class="fa fa-check"></i><b>5.2.3</b> 3. Check Status</a></li>
+<li class="chapter" data-level="5.2.4" data-path="essential-git-commands.html"><a href="essential-git-commands.html#stage-changes"><i class="fa fa-check"></i><b>5.2.4</b> 4. Stage Changes</a></li>
+<li class="chapter" data-level="5.2.5" data-path="essential-git-commands.html"><a href="essential-git-commands.html#commit-changes"><i class="fa fa-check"></i><b>5.2.5</b> 5. Commit Changes</a></li>
+<li class="chapter" data-level="5.2.6" data-path="essential-git-commands.html"><a href="essential-git-commands.html#view-history"><i class="fa fa-check"></i><b>5.2.6</b> 6. View History</a></li>
+<li class="chapter" data-level="5.2.7" data-path="essential-git-commands.html"><a href="essential-git-commands.html#synchronize-with-github"><i class="fa fa-check"></i><b>5.2.7</b> 7. Synchronize with GitHub</a></li>
+<li class="chapter" data-level="5.2.8" data-path="essential-git-commands.html"><a href="essential-git-commands.html#undo-changes"><i class="fa fa-check"></i><b>5.2.8</b> 8. Undo Changes</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="essential-git-commands.html"><a href="essential-git-commands.html#daily-research-workflow"><i class="fa fa-check"></i><b>5.3</b> Daily Research Workflow</a></li>
+<li class="chapter" data-level="5.4" data-path="essential-git-commands.html"><a href="essential-git-commands.html#next-steps-2"><i class="fa fa-check"></i><b>5.4</b> Next Steps</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="complete-github-workflow.html"><a href="complete-github-workflow.html"><i class="fa fa-check"></i><b>6</b> Complete GitHub Workflow</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="complete-github-workflow.html"><a href="complete-github-workflow.html#getting-your-work-on-github"><i class="fa fa-check"></i><b>6.1</b> Getting Your Work on GitHub</a></li>
+<li class="chapter" data-level="6.2" data-path="complete-github-workflow.html"><a href="complete-github-workflow.html#step-1-create-repository-on-github"><i class="fa fa-check"></i><b>6.2</b> Step 1: Create Repository on GitHub</a></li>
+<li class="chapter" data-level="6.3" data-path="complete-github-workflow.html"><a href="complete-github-workflow.html#step-2-connect-your-local-site-to-github"><i class="fa fa-check"></i><b>6.3</b> Step 2: Connect Your Local Site to GitHub</a></li>
+<li class="chapter" data-level="6.4" data-path="complete-github-workflow.html"><a href="complete-github-workflow.html#step-3-basic-git-workflow"><i class="fa fa-check"></i><b>6.4</b> Step 3: Basic Git Workflow</a></li>
+<li class="chapter" data-level="6.5" data-path="complete-github-workflow.html"><a href="complete-github-workflow.html#common-git-commands"><i class="fa fa-check"></i><b>6.5</b> Common Git Commands</a>
+<ul>
+<li class="chapter" data-level="6.5.1" data-path="complete-github-workflow.html"><a href="complete-github-workflow.html#see-whats-changed"><i class="fa fa-check"></i><b>6.5.1</b> See what’s changed</a></li>
+<li class="chapter" data-level="6.5.2" data-path="complete-github-workflow.html"><a href="complete-github-workflow.html#save-changes-locally"><i class="fa fa-check"></i><b>6.5.2</b> Save changes locally</a></li>
+<li class="chapter" data-level="6.5.3" data-path="complete-github-workflow.html"><a href="complete-github-workflow.html#send-to-github"><i class="fa fa-check"></i><b>6.5.3</b> Send to GitHub</a></li>
+<li class="chapter" data-level="6.5.4" data-path="complete-github-workflow.html"><a href="complete-github-workflow.html#get-latest-from-github-if-editing-from-multiple-computers"><i class="fa fa-check"></i><b>6.5.4</b> Get latest from GitHub (if editing from multiple computers)</a></li>
+</ul></li>
+<li class="chapter" data-level="6.6" data-path="complete-github-workflow.html"><a href="complete-github-workflow.html#daily-workflow-example"><i class="fa fa-check"></i><b>6.6</b> Daily Workflow Example</a></li>
+<li class="chapter" data-level="6.7" data-path="complete-github-workflow.html"><a href="complete-github-workflow.html#common-commit-messages"><i class="fa fa-check"></i><b>6.7</b> Common Commit Messages</a></li>
+<li class="chapter" data-level="6.8" data-path="complete-github-workflow.html"><a href="complete-github-workflow.html#troubleshooting-1"><i class="fa fa-check"></i><b>6.8</b> Troubleshooting</a>
+<ul>
+<li class="chapter" data-level="6.8.1" data-path="complete-github-workflow.html"><a href="complete-github-workflow.html#if-you-get-an-error-about-authentication"><i class="fa fa-check"></i><b>6.8.1</b> If you get an error about authentication:</a></li>
+<li class="chapter" data-level="6.8.2" data-path="complete-github-workflow.html"><a href="complete-github-workflow.html#if-you-get-merge-conflicts"><i class="fa fa-check"></i><b>6.8.2</b> If you get merge conflicts:</a></li>
+<li class="chapter" data-level="6.8.3" data-path="complete-github-workflow.html"><a href="complete-github-workflow.html#if-you-forgot-to-pull-first"><i class="fa fa-check"></i><b>6.8.3</b> If you forgot to pull first:</a></li>
+</ul></li>
+<li class="chapter" data-level="6.9" data-path="complete-github-workflow.html"><a href="complete-github-workflow.html#next-steps-3"><i class="fa fa-check"></i><b>6.9</b> Next Steps</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">GitHub Basics for Academic Researchers</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="authentication-setup" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">Chapter 4</span> Authentication Setup<a href="authentication-setup.html#authentication-setup" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>GitHub requires a Personal Access Token (PAT) instead of passwords for Git operations.</p>
+<div id="preferred-method-r-rstudio" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> Preferred Method: R + RStudio<a href="authentication-setup.html#preferred-method-r-rstudio" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The easiest way to set up GitHub authentication:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="authentication-setup.html#cb4-1" tabindex="-1"></a><span class="co"># In R or RStudio:</span></span>
+<span id="cb4-2"><a href="authentication-setup.html#cb4-2" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">&quot;usethis&quot;</span>, <span class="st">&quot;gitcreds&quot;</span>))</span>
+<span id="cb4-3"><a href="authentication-setup.html#cb4-3" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">create_github_token</span>()  <span class="co"># Opens browser to create PAT</span></span>
+<span id="cb4-4"><a href="authentication-setup.html#cb4-4" tabindex="-1"></a>gitcreds<span class="sc">::</span><span class="fu">gitcreds_set</span>()        <span class="co"># Enter your PAT when prompted</span></span></code></pre></div>
+<p>That’s it! The <code>usethis::create_github_token()</code> function will open your browser to create the PAT with the right permissions, and <code>gitcreds::gitcreds_set()</code> will store it securely.</p>
+</div>
+<div id="alternative-git-cli-credential-helper" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Alternative: Git CLI + Credential Helper<a href="authentication-setup.html#alternative-git-cli-credential-helper" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>If you prefer using Git from the command line:</p>
+<p><strong>macOS:</strong></p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="authentication-setup.html#cb5-1" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> credential.helper osxkeychain</span></code></pre></div>
+<p><strong>Windows:</strong></p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="authentication-setup.html#cb6-1" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> credential.helper manager-core</span></code></pre></div>
+<p>When you clone or push, you’ll be asked for:
+- Username: your_github_username
+- Password: your_PAT_here</p>
+<p>✅ Git will remember the token after this — no need to reenter.</p>
+</div>
+<div id="creating-your-personal-access-token-manually" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> Creating Your Personal Access Token Manually<a href="authentication-setup.html#creating-your-personal-access-token-manually" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>If you need to create a PAT manually (instead of using <code>usethis::create_github_token()</code>):</p>
+<p>Go to GitHub Settings → Developer settings → Personal access tokens → Tokens (classic), then:</p>
+<ul>
+<li>Click “Generate new token (classic)”</li>
+<li>Give it a descriptive name (e.g., “Academic Projects 2024”)</li>
+<li>Set expiration (recommended: 90 days for learning, 1 year for regular use)</li>
+<li>Select scopes:
+<ul>
+<li><strong>repo</strong> - Full control of private repositories (most important)</li>
+<li><strong>workflow</strong> - Update GitHub Actions workflows</li>
+<li><strong>user</strong> - Update user data</li>
+</ul></li>
+<li>Click “Generate token”</li>
+<li><strong>Copy the token immediately</strong> - you won’t see it again!</li>
+</ul>
+<div id="token-security-best-practices" class="section level3 hasAnchor" number="4.3.1">
+<h3><span class="header-section-number">4.3.1</span> Token Security Best Practices<a href="authentication-setup.html#token-security-best-practices" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Do:</strong>
+- ✅ Use descriptive names for tokens
+- ✅ Set appropriate expiration dates<br />
+- ✅ Use minimum required scopes
+- ✅ Store tokens securely (password manager)
+- ✅ Revoke unused tokens</p>
+<p><strong>Don’t:</strong>
+- ❌ Share tokens with others
+- ❌ Commit tokens to repositories
+- ❌ Use tokens in public scripts
+- ❌ Give tokens more permissions than needed</p>
+</div>
+</div>
+<div id="testing-your-setup" class="section level2 hasAnchor" number="4.4">
+<h2><span class="header-section-number">4.4</span> Testing Your Setup<a href="authentication-setup.html#testing-your-setup" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="verify-git-configuration" class="section level3 hasAnchor" number="4.4.1">
+<h3><span class="header-section-number">4.4.1</span> Verify Git Configuration<a href="authentication-setup.html#verify-git-configuration" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="authentication-setup.html#cb7-1" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--list</span></span>
+<span id="cb7-2"><a href="authentication-setup.html#cb7-2" tabindex="-1"></a><span class="co"># Should show your name and email</span></span></code></pre></div>
+</div>
+<div id="test-authentication" class="section level3 hasAnchor" number="4.4.2">
+<h3><span class="header-section-number">4.4.2</span> Test Authentication<a href="authentication-setup.html#test-authentication" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Try cloning a repository:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="authentication-setup.html#cb8-1" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/username/repository.git</span></code></pre></div>
+<p>When prompted, enter:
+- Username: your_github_username
+- Password: your_PAT (not your account password!)</p>
+<p>If using the credential helpers above, Git will remember your token for future use.</p>
+</div>
+</div>
+<div id="troubleshooting" class="section level2 hasAnchor" number="4.5">
+<h2><span class="header-section-number">4.5</span> Troubleshooting<a href="authentication-setup.html#troubleshooting" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="authentication-failed" class="section level3 hasAnchor" number="4.5.1">
+<h3><span class="header-section-number">4.5.1</span> Authentication Failed<a href="authentication-setup.html#authentication-failed" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Common issues:</strong>
+- Using account password instead of PAT
+- Token has expired
+- Insufficient token permissions
+- Typo in username or token</p>
+<p><strong>Solutions:</strong>
+1. Verify you’re using the PAT, not your password
+2. Check token expiration date
+3. Ensure token has “repo” scope
+4. Try clearing credentials and re-entering</p>
+</div>
+<div id="clear-stored-credentials" class="section level3 hasAnchor" number="4.5.2">
+<h3><span class="header-section-number">4.5.2</span> Clear Stored Credentials<a href="authentication-setup.html#clear-stored-credentials" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>macOS:</strong></p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="authentication-setup.html#cb9-1" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> <span class="at">--unset</span> credential.helper</span></code></pre></div>
+<p><strong>Windows:</strong>
+- Open Credential Manager
+- Remove GitHub entries
+- Or use: <code>git config --global --unset credential.helper</code></p>
+<hr />
+<p><strong>Next Chapter Preview</strong>: Now that you have Git installed and authentication configured, we’ll learn the essential Git commands for daily workflow: add, commit, push, and pull.</p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="create-your-github-account.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="essential-git-commands.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": "https://github.com/your-username/github-basics-tutorial/edit/main/03-authentication.Rmd",
+    "text": "Edit"
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": "https://github.com/your-username/github-basics-tutorial/blob/main/03-authentication.Rmd",
+    "text": null
+  },
+  "download": ["github-basics-tutorial.pdf", "github-basics-tutorial.epub"],
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+</body>
+
+</html>

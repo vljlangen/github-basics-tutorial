@@ -1,0 +1,123 @@
+# Personal Access Token
+
+
+<br><br>
+<div style="text-align: center;">
+<img src="images/token.jpg" alt="Chapter introduction image" style="max-width: 100%; height: auto;">
+<figcaption style="font-size: 0.9em; color: gray; margin-top: 5px;">
+    Image credit: <a href="https://unsplash.com/photos/grayscale-photography-of-person-holding-coin-b4D7FKAghoE" target="_blank">Unsplash</a>
+</figcaption>
+</div>
+<br><br>
+
+
+
+
+GitHub requires a Personal Access Token (PAT) instead of passwords for Git operations.
+
+## Preferred Method: R + RStudio
+
+If you don't already have R and RStudio installed, it's very easy and highly recommended to install them:
+
+- **R**: Download from [https://cran.r-project.org/](https://cran.r-project.org/)
+- **RStudio**: Download from [https://posit.co/download/rstudio-desktop/](https://posit.co/download/rstudio-desktop/)
+
+Both are free and install quickly on all major operating systems.
+
+The easiest way to set up GitHub authentication is to run the following commands in R or RStudio:
+
+```r
+install.packages(c("usethis", "gitcreds"))
+usethis::create_github_token()  # Opens browser to create PAT
+gitcreds::gitcreds_set()        # Enter your PAT when prompted
+```
+
+When you run `usethis::create_github_token()`, it will open your browser to GitHub where you'll need to:
+
+- Click "Generate new token (classic)"
+- Give it a descriptive name (e.g., "Academic Projects 2024")
+- Set expiration (recommended: 90 days for learning, 1 year for regular use)
+- Select scopes (the function pre-selects the right ones, but verify you have **repo**, **workflow**, and **user**)
+- Click "Generate token"
+- **Copy the token immediately** - you won't see it again! Store it in a password manager for safekeeping.
+
+Then return to R/RStudio and run `gitcreds::gitcreds_set()` to enter your PAT when prompted.
+
+That's it!
+
+## Alternative: Git CLI + Credential Helper
+
+If you do not want to install R and RStudio, you can create your PAT manually on GitHub:
+
+Go to GitHub Settings → Developer settings → Personal access tokens → Tokens (classic), then follow the same steps as described above (click "Generate new token (classic)", give it a name, set expiration, select scopes, generate and copy the token).
+
+Then configure your credential helper:
+
+**macOS:**
+```bash
+git config --global credential.helper osxkeychain
+```
+
+**Windows:**
+```bash
+git config --global credential.helper manager-core
+```
+
+When you clone or push, you'll be asked for:
+
+- Username: your_github_username
+- Password: your_PAT_here
+
+✅ Git will remember the token after this — no need to reenter.
+
+
+## Testing Your Setup
+
+### Verify Git Configuration
+
+```bash
+git config --list
+# Should show your name and email
+```
+
+### Test Authentication
+
+Try cloning a repository:
+
+```bash
+git clone https://github.com/username/repository.git
+```
+
+When prompted, enter:
+
+- Username: your_github_username
+- Password: your_PAT (not your account password!)
+
+**Notes**:
+
+1) If you used the R/RStudio method above, you might not be asked for credentials at all since they're already stored securely.
+2) If using the credential helpers (explained above), Git will remember your token for future use.
+
+## Troubleshooting
+
+### Authentication Failed
+
+**Common issues:**
+
+- Using account password instead of PAT
+- Token has expired
+- Insufficient token permissions
+- Typo in username or token
+
+**Solutions:**
+
+1. Verify you're using the PAT, not your password
+2. Check token expiration date
+3. Ensure token has "repo" scope
+4. Try clearing credentials and re-entering
+
+
+
+---
+
+**Next Chapter Preview**: Now that you have Git installed and authentication configured, we'll learn the essential Git commands for daily workflow: add, commit, push, and pull. 
